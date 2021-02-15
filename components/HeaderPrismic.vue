@@ -1,7 +1,9 @@
 <template>
   <header class="site-header">
     <p v-if="$store.state.menu === 'Please create a menu document'" class="logo">{{ $store.state.menu }}</p>
-    <nuxt-link to="/" class="logo"><img :src="$store.state.menu.icon.url"></nuxt-link>
+    <div class="logo-icon">
+      <nuxt-link to="/" class="logo"><img src="https://marinersmuseum.org/wp-content/uploads/2018/06/nothing-bundt-cakes-logo.png"></nuxt-link>
+    </div>
     <nav class="menu">
       <ul>
         <li v-for="menuLink in $store.state.menu.menu_links" :key="menuLink.id">
@@ -29,6 +31,7 @@ export default {
     color: #484d52
     font-weight: 700
 
+
 .homepage .site-header
   color: #ffffff
   a
@@ -37,10 +40,10 @@ export default {
     color: #c8c9cb
 
 .site-header
-  .logo
-    display: inline-block
-    font-size: 22px
-    font-weight: 900
+  .logo-icon
+    width: 20%; 
+    height: 20%; 
+    object-fit: contain; 
 .menu
   a:hover
     color: #72767B

@@ -1,11 +1,14 @@
 export default {
-  mode: 'universal',
+  target: 'static',
+  generate: {
+    fallback: true
+  },
 
   /*
   ** Headers of the page
   */
   head: {
-    title: 'Nuxt + Prismic',
+    title: 'NBC + Prismic',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -50,7 +53,7 @@ export default {
   ],
 
   prismic: {
-    endpoint: 'https://enviedefraise-demo.cdn.prismic.io/api/v2',
+    endpoint: 'https://nbc-demo.cdn.prismic.io/api/v2',
     linkResolver: '@/plugins/link-resolver',
     htmlSerializer: '@/plugins/html-serializer',
   },
