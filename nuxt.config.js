@@ -1,8 +1,5 @@
 export default {
-  target: 'static',
-  generate: {
-    fallback: true
-  },
+  mode: 'universal',
 
   /*
   ** Headers of the page
